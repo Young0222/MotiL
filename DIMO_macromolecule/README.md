@@ -20,5 +20,8 @@ mv go ec data
 # Install environment
 pip install -r requirements.txt
 
-# Running model
-bash run.sh
+# Running model for pretraining (diffusion priming and contrastive learning)
+bash pretrain_dimo.sh
+
+# Running model for finetuning
+bash finetune_dimo.sh
