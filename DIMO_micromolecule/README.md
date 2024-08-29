@@ -1,9 +1,9 @@
 
-### Diffusion-primed molecular contrastive learning for micro- and macromolecules ###
+# Diffusion-primed molecular contrastive learning for micro- and macromolecules #
 
-This repository is the official implementation of **DIMO** for micromolecules, which is model proposed in a paper: [**Diffusion-primed molecular contrastive learning for micro- and macromolecules**]. 
+This repository is the official implementation of **DIMO** for micromolecules, which is proposed in a paper: [**Diffusion-primed molecular contrastive learning for micro- and macromolecules**]. 
 
-We propose DIffusion-primed Molecular cOntrastive learning (**DIMO**), which integrates generative diffusion models with molecular contrastive learning.
+We propose **DI**ffusion-primed **M**olecular c**O**ntrastive learning (**DIMO**), which integrates generative diffusion models with molecular contrastive learning.
 
 ## 🤖 Model
 
