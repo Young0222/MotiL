@@ -18,8 +18,7 @@ DIMO includes three phases totally: 1) diffusion priming, 2) multi-scaled contra
 # Install environment
 pip install -r requirements.txt
 
-# Running DIMO for pretraining (diffusion priming and contrastive learning)
-bash pretrain_dimo.sh
+# Running DIMO
+**For pretraining (diffusion priming and contrastive learning)**: bash pretrain_dimo.sh
 
-# Running DIMO for finetuning
-bash finetune_dimo.sh
+**For finetuning**: bash finetune_dimo.sh
