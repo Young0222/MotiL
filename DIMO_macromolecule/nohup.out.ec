@@ -468,7 +468,7 @@ Epoch: 463, Validation: 0.8446, Test: 0.8794, Time: 88.7787
 Epoch: 464, Validation: 0.8472, Test: 0.8805, Time: 88.1430
 Epoch: 465, Validation: 0.8450, Test: 0.8803, Time: 87.5214
 Epoch: 466, Validation: 0.8430, Test: 0.8793, Time: 86.6545
-Epoch: 467, Validation: 0.8483, Test: 0.8801, Time: 87.2723
+Epoch: 467, Validation: 0.8483, Test: 0.8811, Time: 87.2723
 Epoch: 468, Validation: 0.8434, Test: 0.8794, Time: 89.0216
 Epoch: 469, Validation: 0.8428, Test: 0.8809, Time: 86.8860
 Epoch: 470, Validation: 0.8436, Test: 0.8802, Time: 88.0779
@@ -502,4 +502,4 @@ Epoch: 497, Validation: 0.8445, Test: 0.8783, Time: 86.8955
 Epoch: 498, Validation: 0.8448, Test: 0.8797, Time: 87.5789
 Epoch: 499, Validation: 0.8437, Test: 0.8798, Time: 88.1047
 Epoch: 500, Validation: 0.8453, Test: 0.8805, Time: 88.0810
-Best: 467, Validation: 0.8483, Test: 0.8822, Valided Test: 0.8801
+Best: 467, Validation: 0.8483, Test: 0.8822, Valided Test: 0.8811
