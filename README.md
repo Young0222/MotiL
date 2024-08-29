@@ -3,7 +3,7 @@
 This repository is the official implementation of **DIMO** for micro- and macromolecules, 
 which is proposed in a paper: [**Diffusion-primed molecular contrastive learning for micro- and macromolecules**]. 
 
-# After running the fine-tuning script, you will obtain records consistent with the results reported in our paper. #
+** After running the fine-tuning script, you will obtain records consistent with the results reported in our paper. **
 
 Examples:
 
