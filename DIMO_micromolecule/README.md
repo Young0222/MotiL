@@ -5,7 +5,7 @@ This repository is the official implementation of **DIMO** for micromolecules, w
 
 We propose **DI**ffusion-primed **M**olecular c**O**ntrastive learning (**DIMO**), which integrates generative diffusion models with molecular contrastive learning.
 
-## 🤖 Model
+## Brief introduction
 
 DIMO includes three phases totally: 1) diffusion priming, 2) multi-scaled contrastive learning with network pruning, and 3) task-specific finetuning.
 
