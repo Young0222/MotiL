@@ -11,9 +11,7 @@ Before running the model, please download the data and pretrained model from thi
 # Decompress data
 mkdir data
 
-tar -xzvf go.tar.gz
-
-tar -xzvf ec.tar.gz
+tar -xzvf go.tar.gz -xzvf ec.tar.gz
 
 mv go ec data
 
