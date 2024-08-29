@@ -202,6 +202,7 @@ def parse_args():
     parser.add_argument('--num-pretrain-epochs', default=3, type=int, metavar='N', help='number of pretraining epochs')
     parser.add_argument('--prune1', default=0.0, type=float, help='dropout of model1')
     parser.add_argument('--prune2', default=0.3, type=float, help='dropout of model2')
+    parser.add_argument('--pretrain', default=False, type=str, help='whether to pretrain the model')
 
     args = parser.parse_args()
     return args
@@ -263,34 +264,38 @@ if __name__ == '__main__':
     # load pretraining model
     model_path = './pretrain_model_cc.pth'
 
-    # # save pretraining model
-    # for epoch in range(args.num_pretrain_epochs):
-    #     print("Cureent pretraining epoch: ", epoch)
-    #     pretrain(epoch, train_loader, loss_fn, args.prune1, args.prune2)
-    # torch.save(model.state_dict(), model_path)
-    # print("Pretraining is finished!")
+    if args.pretrain == 'True':
+        for epoch in range(args.num_pretrain_epochs):
+            print("Cureent pretraining epoch: ", epoch)
+            pretrain(epoch, train_loader, loss_fn, args.prune1, args.prune2)
+        torch.save(model.state_dict(), model_path)
+        print("Pretraining is finished!")
 
-    model.load_state_dict(torch.load(model_path, map_location=device))
-    epoch_times = 0
-    for epoch in range(args.num_epochs):
-        start_time = time.time()
+    else:
+        if not os.path.exists(args.ckpt_path):
+            os.mkdir(args.ckpt_path)
+        model.load_state_dict(torch.load(model_path, map_location=device))
+        epoch_times = 0
 
-        train(epoch, train_loader, loss_fn)
-        lr_scheduler.step()
-        valid_fmax = test(valid_loader)
-        test_95 = test(test_loader_95)
+        for epoch in range(args.num_epochs):
+            start_time = time.time()
 
-        end_time = time.time()
-        epoch_time = end_time - start_time
-        epoch_times += epoch_time
-        print(f'Epoch: {epoch+1:03d}, Validation: {valid_fmax:.4f}, Test: {test_95:.4f}, Time: {epoch_time:.4f}')
-        if valid_fmax >= best_valid:
-            best_valid = valid_fmax
-            best_95 = test_95
-            best_epoch = epoch
-            checkpoint = model.state_dict()
-        best_test_95 = max(test_95, best_test_95)
+            train(epoch, train_loader, loss_fn)
+            lr_scheduler.step()
+            valid_fmax = test(valid_loader)
+            test_95 = test(test_loader_95)
 
-    print(f'Best: {best_epoch+1:03d}, Validation: {best_valid:.4f}, Test: {best_test_95:.4f}, Valided Test: {best_95:.4f}, Total time: {epoch_times:.4f}')
-    if args.ckpt_path:
-        torch.save(checkpoint, osp.join(args.ckpt_path))
+            end_time = time.time()
+            epoch_time = end_time - start_time
+            epoch_times += epoch_time
+            print(f'Epoch: {epoch+1:03d}, Validation: {valid_fmax:.4f}, Test: {test_95:.4f}, Time: {epoch_time:.4f}')
+            if valid_fmax >= best_valid:
+                best_valid = valid_fmax
+                best_95 = test_95
+                best_epoch = epoch
+                checkpoint = model.state_dict()
+            best_test_95 = max(test_95, best_test_95)
+
+        print(f'Best: {best_epoch+1:03d}, Validation: {best_valid:.4f}, Test: {best_test_95:.4f}, Valided Test: {best_95:.4f}, Total time: {epoch_times:.4f}')
+        if args.ckpt_path:
+            torch.save(checkpoint, osp.join(args.ckpt_path, 'final_model.pth'))
