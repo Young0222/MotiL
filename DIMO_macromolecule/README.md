@@ -1,9 +1,9 @@
-# DIMO #
+# MotiL #
 
-This repository is the official implementation of **DIMO** for macromolecules, which is proposed in a paper: [**Diffusion-primed molecular contrastive learning for micro- and macromolecules**]. 
+This repository is the official implementation of **MotiL** for macromolecules, which is proposed in a paper: [**Diffusion-primed molecular contrastive learning for micro- and macromolecules**]. 
 
-We propose **DI**ffusion-primed **M**olecular c**O**ntrastive learning (**DIMO**), which integrates generative diffusion models with molecular contrastive learning.
-DIMO includes three phases totally: 1) diffusion priming, 2) multi-scaled contrastive learning with network pruning, and 3) task-specific finetuning
+We propose **Mo**lecular mo**ti**f **L**earning (**MotiL**), which is a novel pretraining representation learning method for molecules.
+MotiL includes three phases totally: 1) diffusion priming, 2) bi-scaled training, and 3) task-specific fine-tuning
 
 # Download data and pretrained model
 Before running the model, please download the data and pretrained model from this URL: https://pan.baidu.com/s/1JpsVM3WhISKdmWWlU0fhew?pwd=ybbw
@@ -21,7 +21,7 @@ mv go ec data
 pip install -r requirements.txt
 
 # Running DIMO
-**For pretraining (diffusion priming and contrastive learning)**:
+**For pretraining (diffusion priming and bi-scaled training)**:
 
 bash pretrain_dimo.sh
 
