@@ -23,8 +23,8 @@ pip install -r requirements.txt
 # Running DIMO
 **For pretraining (diffusion priming and bi-scaled training)**:
 
-bash pretrain_dimo.sh
+bash pretrain_motil.sh
 
 **For finetuning**:
 
-bash finetune_dimo.sh
+bash finetune_motil.sh
