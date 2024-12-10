@@ -1,6 +1,6 @@
-# DIMO #
+# MotiL #
 
-This repository is the official implementation of **DIMO** for micro- and macromolecules, 
+This repository is the official implementation of **MotiL** for micro- and macromolecules, 
 which is proposed in a paper: [**Diffusion-primed molecular contrastive learning for micro- and macromolecules**]. 
 
 **After running the provided scripts, you will get the following logs where the fine-tuned results align with those reported in our paper.**
