@@ -18,7 +18,7 @@ MotiL includes three phases totally: 1) diffusion priming, 2) bi-scaled training
 # Install environment
 pip install -r requirements.txt
 
-# Running DIMO
+# Running MotiL
 **For pretraining (diffusion priming and bi-scaled training)**:
 
 bash pretrain_motil.sh
