@@ -7,15 +7,15 @@ which is proposed in a paper: [**Molecule Motif Learning**].
 
 Examples:
 
-BBBP [DIMO_micromolecule/nohup.out.bbbp](DIMO_micromolecule/nohup.out.bbbp)
+BBBP [MotiL_micromolecule/nohup.out.bbbp](MotiL_micromolecule/nohup.out.bbbp)
 
-ClinTox [DIMO_micromolecule/nohup.out.clintox](DIMO_micromolecule/nohup.out.clintox)
+ClinTox [MotiL_micromolecule/nohup.out.clintox](MotiL_micromolecule/nohup.out.clintox)
 
-BACE [DIMO_micromolecule/nohup.out.bace](DIMO_micromolecule/nohup.out.bace)
+BACE [MotiL_micromolecule/nohup.out.bace](MotiL_micromolecule/nohup.out.bace)
 
-ESOL [DIMO_micromolecule/nohup.out.esol](DIMO_micromolecule/nohup.out.esol)
+ESOL [MotiL_micromolecule/nohup.out.esol](MotiL_micromolecule/nohup.out.esol)
 
-GO-CC [DIMO_macromolecule/nohup.out.cc](DIMO_macromolecule/nohup.out.cc)
+GO-CC [MotiL_macromolecule/nohup.out.cc](MotiL_macromolecule/nohup.out.cc)
 
-EC [DIMO_macromolecule/nohup.out.ec](DIMO_macromolecule/nohup.out.ec)
+EC [MotiL_macromolecule/nohup.out.ec](MotiL_macromolecule/nohup.out.ec)
 
