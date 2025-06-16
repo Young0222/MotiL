@@ -1,3 +1,5 @@
+License: MIT
+
 # MotiL #
 
 This repository is the official implementation of **MotiL** for micro- and macromolecules, 
