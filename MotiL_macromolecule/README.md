@@ -6,7 +6,7 @@ We propose **Mo**lecular mo**ti**f **L**earning (**MotiL**), which is a novel pr
 MotiL includes three phases totally: 1) diffusion priming, 2) bi-scaled training, and 3) task-specific fine-tuning.
 
 # Download data and pretrained model
-Before running the model, please download the data and pretrained model from this URL: https://pan.baidu.com/s/1JpsVM3WhISKdmWWlU0fhew?pwd=ybbw
+Before running the model, please download the data and pretrained model from this URL: [https://pan.baidu.com/s/1JpsVM3WhISKdmWWlU0fhew?pwd=ybbw](https://huggingface.co/datasets/Young0222/MotiL/tree/main)
 
 # Decompress data
 mkdir data
