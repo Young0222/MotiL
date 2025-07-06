@@ -1,6 +1,6 @@
 # MotiL #
 
-This repository is the official implementation of **MotiL** for macromolecules, which is proposed in a paper: [**Molecule Motif Learning**]. 
+This repository is the official implementation of **MotiL** for macromolecules, which is proposed in a paper: [**Molecular Motif Learning**]. 
 
 We propose **Mo**lecular mo**ti**f **L**earning (**MotiL**), which is a novel pretraining representation learning method for molecules.
 MotiL includes three phases totally: 1) diffusion priming, 2) bi-scaled training, and 3) task-specific fine-tuning.
