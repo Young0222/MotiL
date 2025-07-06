@@ -1,7 +1,7 @@
 
-# Molecule Motif Learning #
+# Molecular Motif Learning #
 
-This repository is the official implementation of **MotiL** for micromolecules, which is proposed in a paper: [**Molecule Motif Learning**]. 
+This repository is the official implementation of **MotiL** for micromolecules, which is proposed in a paper: [**Molecular Motif Learning**]. 
 
 We propose **Mo**lecular mo**ti**f **L**earning (**MotiL**), which is a novel pretraining representation learning method for molecules.
 
