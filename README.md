@@ -4,7 +4,7 @@
 # MotiL #
 
 This repository is the official implementation of **MotiL** for micro- and macromolecules, 
-which is proposed in a paper: [**Molecule Motif Learning**].
+which is proposed in a paper: [**Molecular Motif Learning**].
 
 **After running the provided scripts, you will get the following logs where the fine-tuned results align with those reported in our paper.**
 
