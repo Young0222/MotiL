@@ -5,25 +5,31 @@
 
 > **Mo**lecular mo**ti**f **L**earning for molecular property prediction
 >
-> 🧬 A motif-centered pretraining framework for molecular property prediction
+> A motif-centered pretraining framework for molecular property prediction
 
 This repository is the official implementation of **MotiL** for micro- and macromolecules, which is proposed in our [paper](https://www.nature.com/articles/s41467-025-66685-w).
 
 MotiL is a molecular pretraining framework centered on **motif learning**.  
 This repository contains two parts:
 
-- 🔬 `MotiL_micromolecule`: code for small-molecule pretraining and downstream prediction
-- 🧫 `MotiL_macromolecule`: code for macromolecule pretraining and downstream prediction
+- `MotiL_micromolecule`: code for small-molecule pretraining and downstream prediction
+- `MotiL_macromolecule`: code for macromolecule pretraining and downstream prediction
 
 ## ✨ Overview
 
 MotiL learns molecular representations through three main stages:
 
-1. 🌱 **Diffusion priming**
-2. 🧠 **Bi-scaled training**
-3. 🎯 **Task-specific fine-tuning**
+1. **Diffusion priming**
+2. **Bi-scaled training**
+3. **Task-specific fine-tuning**
 
 The goal is to learn better molecular representations before downstream property prediction, so that the model can perform well on both micromolecule and macromolecule tasks.
+
+## 🧠 Model Introduction
+
+![Overview of MotiL](motil.png)
+
+As shown above, MotiL is built around a GNN encoder and learns molecular representations from both whole-molecule structure and motif-level patterns. In the first stage, **diffusion priming** perturbs and reconstructs molecular bonds to warm up the encoder and help it capture global structural information. In the second stage, **bi-scaled training** aligns representations at both the graph level and the motif level, so molecules with similar scaffolds and motifs with similar chemical meanings stay close in the representation space. In the final stage, the pretrained encoder is **fine-tuned** with task labels for downstream molecular property prediction on both micromolecules and macromolecules.
 
 ## 🗂 Repository Structure
 
@@ -92,9 +98,9 @@ We propose **Molecular motif Learning (MotiL)**, a novel pretraining representat
 
 MotiL includes three phases:
 
-1. 🌱 **Diffusion priming**
-2. 🧠 **Bi-scaled training**
-3. 🎯 **Task-specific fine-tuning**
+1. **Diffusion priming**
+2. **Bi-scaled training**
+3. **Task-specific fine-tuning**
 
 **Diffusion priming**  
 The diffusion molecular model in MotiL enables the GNN encoder to accurately capture molecular structure before contrastive learning.
@@ -107,8 +113,8 @@ The pretrained GNN encoders are used to predict representations for unseen molec
 
 ### Included resources
 
-- 📁 Benchmark datasets are already provided in `MotiL_micromolecule/data/`
-- 💾 A pretrained checkpoint is already included in `MotiL_micromolecule/dumped/pre-train/1-model/`
+- Benchmark datasets are already provided in `MotiL_micromolecule/data/`
+- A pretrained checkpoint is already included in `MotiL_micromolecule/dumped/pre-train/1-model/`
 
 ### Install environment
 
@@ -157,9 +163,9 @@ We propose **Molecular motif Learning (MotiL)**, a novel pretraining representat
 
 MotiL includes three phases:
 
-1. 🌱 **Diffusion priming**
-2. 🧠 **Bi-scaled training**
-3. 🎯 **Task-specific fine-tuning**
+1. **Diffusion priming**
+2. **Bi-scaled training**
+3. **Task-specific fine-tuning**
 
 ### Step 1. Download data and pretrained files
 
@@ -194,8 +200,8 @@ bash pretrain_motil.sh
 
 This script contains example commands for:
 
-- 🧩 GO dataset
-- 🧩 EC dataset
+- GO dataset
+- EC dataset
 
 For finetuning:
 
@@ -206,8 +212,8 @@ bash finetune_motil.sh
 
 This script contains example commands for:
 
-- ✅ GO-CC
-- ✅ EC
+- GO-CC
+- EC
 
 If needed, please change the `--gpu` setting in the script before running.
 
